@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accès Kawaki</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+    }
+
+    /* Vidéo en fond */
+    video#bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    /* Contenu */
+    .container {
+        position: relative;
+        z-index: 1;
+        margin-top: 60px;
+    }
+
+    /* Photo en rond */
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid white;
+        object-fit: cover;
+    }
+
+    /* Boutons */
+    a, button {
+        display: inline-block;
+        margin: 10px;
+        padding: 12px 20px;
+        background: rgba(0, 123, 255, 0.85);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    a:hover, button:hover {
+        background: rgba(0, 86, 179, 0.9);
+    }
+
+    #btn-acces {
+        background: rgba(40, 167, 69, 0.85);
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<!-- Vidéo de fond -->
+<video id="bg-video" loop playsinline>
+    <source src="https://files.catbox.moe/f47tfx.mp4" type="video/mp4">
+</video>
+
+<!-- Contenu -->
+<div class="container">
+    <img class="profile-pic" src="https://files.catbox.moe/badras.jpeg" alt="Kawaki">
+    <h2>Ⓥ꧁༒𝙺𝙰𝚆𝙰𝙺𝙸²²7༒꧂</h2>
+
+    <p>Pour accéder au fichier, rejoins d'abord :</p>
+    <a href="https://whatsapp.com/channel/0029VaZkyixAO7RPQWYG3M2m" target="_blank">📱 Ma chaîne WhatsApp</a>
+    <a href="https://youtube.com/@kawaki-227?si=FdYQgnDezYfjTZTG" target="_blank">▶ Ma chaîne YouTube</a>
+    
+    <br>
+    <button id="confirmer">✅ J'ai rejoint</button>
+    <br>
+    <a id="btn-acces" href="https://www.mediafire.com/file/9ii1gikf6k5hpbg/%25E2%2593%258B%25EA%25A7%2581%25E0%25BC%2592%25F0%259D%2599%25BA%25F0%259D%2599%25B0%25F0%259D%259A%2586%25F0%259D%2599%25B0%25F0%259D%2599%25BA%25F0%259D%2599%25B8%25C2%25B2%25C2%25B27%25E0%25BC%2592%25EA%25A7%2582_EVO_HACK.zip/file" target="_blank">📥 Télécharger le fichier</a>
+</div>
+
+<script>
+const video = document.getElementById('bg-video');
+const btnAcces = document.getElementById('btn-acces');
+
+document.getElementById('confirmer').addEventListener('click', function() {
+    alert("Merci d'avoir rejoint ! La musique est activée et le lien est débloqué.");
+    video.muted = false; // Active le son
+    video.play(); // Relance la vidéo avec le son
+    btnAcces.style.display = "inline-block";
+});
+</script>
+
+</body>
+</html>
